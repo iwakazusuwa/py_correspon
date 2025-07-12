@@ -1,4 +1,7 @@
 #コレスポンデンス分析
+import pandas as pd
+import numpy as np
+import os
 import prince  # Correspondence Analysisライブラリ
 import matplotlib.pyplot as plt
 from matplotlib import font_manager as fm
@@ -85,12 +88,6 @@ df1 = df[columns_trimmed_1].copy()
 df2 = df[columns_trimmed_2].copy()
 df3 = df[columns_trimmed_3].copy()
 
-#=============================================
-# まずは、車両数分それぞれのデータフレームに分割
-#=============================================
-df1 = df[columns_trimmed_1].copy()
-df2 = df[columns_trimmed_2].copy()
-df3 = df[columns_trimmed_3].copy()
 
 #=============================================
 # カラム名を統一（df2、df3の列名をdf1に合わせる）
@@ -141,9 +138,7 @@ df_grouped.to_csv(output_dpath + "\\" + OUTPUT_DNAME ,encoding='cp932',index =Fa
 #=============================================
 # 行列入れ替え
 #=============================================  
-
 data = df_grouped.T
-
 
 #=============================================
 # 先頭行を車両名にする
@@ -246,8 +241,7 @@ ax.set_title(
 # 凡例を表示
 ax.legend()
 # プロットを画面に表示
-
-plt.show()
+# plt.show()
 
 #============================================= 
 # 車種と印象語のラベルに区別用の列を追加
