@@ -2,6 +2,8 @@
 
 このPythonスクリプトはコレスポンデンス分析を実装しています。
 
+👉　[ipynbファイルはこちら](https://github.com/iwakazusuwa/ipynb_correspon/blob/main/README.md)
+
 
 詳しい使い方や解説は以下の記事をご覧ください。
 
